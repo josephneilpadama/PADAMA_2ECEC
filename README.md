@@ -127,7 +127,7 @@ plt.show()
 </details> 
 
 
-The dataset was aggregated using .groupby() on Track, Gender, and Hometown combined with .mean() to evaluate category-level performance. To plot the charts side-by-side, the student used plt.subplots(1, 3, sharey=True). Setting sharey=True ensures all subplots share the exact same y-axis scale for direct comparison across groups. Finally, bar_label() was applied to render numerical values above each bar.
+The dataset was aggregated using .groupby() on Track, Gender, and Hometown combined with .mean() to evaluate category-level performance. To plot the charts side-by-side, plt.subplots(1, 3, sharey=True) was used. Setting sharey=True ensures all subplots share the exact same y-axis scale for direct comparison across groups. Finally, bar_label() was applied to render numerical values above each bar.
 
 **Category Interpretation Statements**
 > 1. **Track:** Communication track students recorded the highest overall mean score (68.0).
