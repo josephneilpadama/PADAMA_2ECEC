@@ -37,10 +37,10 @@ df.head(30)
 The excel file was loaded using pd.read_excel(). To calculate the total performance score, the student computed the row-wise mean using df[['Math', 'GEAS', 'Electronics', 'Communication']].mean(axis=1) with axis=1 to cover all four board subjects. The student then used df.head(30) to verify that the dataset and new Average column loaded accurately.
 
 ## A. VISAYAS COMMUNICATION DATAFRAME
-Create a DataFrame named `VisComm` containing students whose `Hometown` is **Visayas** and whose `Track` is **Communication**. Retain only the columns: `Name`, `Gender`, `Math`, `Electronics`, and `Average`. Display the resulting DataFrame and its total row count.
+Create a DataFrame named VisComm containing students whose Hometown is Visayas and whose Track is Communication. Retain only the columns: Name, Gender, Math, Electronics, and Average. Display the resulting DataFrame and its total row count.
 
 <details>
-<summary><b>Click to Expand: Item A Code & Output Screenshot</b></summary>
+<summary><b>Click to Expand: Item A Code and Output </b></summary>
 
 ```python
 vis_comm_filter = (df['Hometown'] == 'Visayas') & (df['Track'] == 'Communication')
@@ -56,14 +56,14 @@ print(f"Number of rows in VisComm: {len(VisComm)}")
 </details> 
 
 
-A Boolean mask was made, combining two conditions with the `&` operator: `df['Hometown'] == 'Visayas'` and `df['Track'] == 'Communication'`. Passing this condition into `.loc[]` allowed the student to filter the matching rows and select only the required columns (`Name`, `Gender`, `Math`, `Electronics`, `Average`). The student then called `len(VisComm)` to print the final row count.
+A Boolean mask was made, combining two conditions with the & operator: df['Hometown'] == 'Visayas' and df['Track'] == 'Communication'. Passing this condition into .loc[] allowed the student to filter the matching rows and select only the required columns (Name, Gender, Math, Electronics, Average). The student then called len(VisComm) to print the final row count.
 
 ## B. VISAYAS FEMALE DATAFRAME
 
-Create a second DataFrame named `VisFemale` containing students whose `Hometown` is **Visayas** and whose `Gender` is **Female**. Retain only the columns: `Name`, `Track`, `GEAS`, `Electronics`, and `Average`. Display `VisFemale`, then display a second filtered view showing only those with an `Average >= 60` without modifying `VisFemale`.
+Create a second DataFrame named VisFemale containing students whose Hometown is Visayas and whose Gender is Female. Retain only the columns: Name, Track, GEAS, Electronics, and Average. Display VisFemale, then display a second filtered view showing only those with an Average >= 60 without modifying VisFemale.
 
 <details>
-<summary><b>Click to Expand: Item B Code & Output Screenshot</b></summary>
+<summary><b>Click to Expand: Item B Code and Output </b></summary>
 
 ```python
 vis_female_filter = (df['Hometown'] == 'Visayas') & (df['Gender'] == 'Female')
@@ -82,15 +82,15 @@ display(vis_female_passed)
 </details>
 
 
-`VisFemale` was created by filtering for female students from Visayas and extracting the requested columns using `.loc[]`. To display students with scores of 60 or higher without modifying `VisFemale`, the student created a temporary DataFrame `vis_female_passed = VisFemale[VisFemale['Average'] >= 60]` and displayed it directly below the primary DataFrame.
+VisFemale was created by filtering for female students from Visayas and extracting the requested columns using .loc[]. To display students with scores of 60 or higher without modifying VisFemale, a temporary DataFrame `vis_female_passed = VisFemale[VisFemale['Average'] >= 60]` was created and displayed it directly below the primary DataFrame.
 
 
 ## C. CATEGORY-AVERAGE VISUALIZATION
 
-Examine how the recorded `Average` score differs across `Track`, `Gender`, and `Hometown`. Compute category means, display the summary tables, and construct a 3-bar chart subplot layout to compare averages visually.
+Examine how the recorded Average score differs across Track, Gender, and Hometown. Compute category means, display the summary tables, and construct a 3-bar chart subplot layout to compare averages visually.
 
 <details>
-<summary><b>Click to Expand: Item C Code & Visualization Plot</b></summary>
+<summary><b>Click to Expand: Item C Code and Output </b></summary>
 
 ```python
 track_mean = df.groupby('Track')['Average'].mean().reset_index()
@@ -127,7 +127,7 @@ plt.show()
 </details> 
 
 
-The dataset was aggregated using `.groupby()` on `Track`, `Gender`, and `Hometown` combined with `.mean()` to evaluate category-level performance. To plot the charts side-by-side, the student used `plt.subplots(1, 3, sharey=True)`. Setting `sharey=True` ensures all subplots share the exact same y-axis scale for direct comparison across groups. Finally, the student applied `bar_label()` to render numerical values above each bar.
+The dataset was aggregated using .groupby() on Track, Gender, and Hometown combined with .mean() to evaluate category-level performance. To plot the charts side-by-side, the student used plt.subplots(1, 3, sharey=True). Setting sharey=True ensures all subplots share the exact same y-axis scale for direct comparison across groups. Finally, the student applied bar_label() to render numerical values above each bar.
 
 **Category Interpretation Statements**
 > 1. **Track:** Communication track students recorded the highest overall mean score (68.0).
