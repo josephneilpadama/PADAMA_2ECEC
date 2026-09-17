@@ -1,7 +1,7 @@
 # Experiment 4: Data Wrangling and Data Visualization
 
 
-> **Student Name:** Padama, Joseph Neil C.  
+> **Name:** Padama, Joseph Neil C.  
 > **Section:** 2ECE-C  
 > **Date Submitted:** September 17, 2026
 
