@@ -34,7 +34,7 @@ df.head(30)
 <img src="images/Setup.png" width="800" alt="Setup DataFrame Preview">
 </details>
 
-The excel file was loaded using pd.read_excel(). To calculate the total performance score, the student computed the row-wise mean using df[['Math', 'GEAS', 'Electronics', 'Communication']].mean(axis=1) with axis=1 to cover all four board subjects. The student then used df.head(30) to verify that the dataset and new Average column loaded accurately.
+The excel file was loaded using pd.read_excel(). To calculate the total performance score, the row-wise mean was computed using df[['Math', 'GEAS', 'Electronics', 'Communication']].mean(axis=1) with axis=1 to cover all four board subjects. df.head(30) was then used to verify that the dataset and new Average column loaded accurately.
 
 ## A. VISAYAS COMMUNICATION DATAFRAME
 Create a DataFrame named VisComm containing students whose Hometown is Visayas and whose Track is Communication. Retain only the columns: Name, Gender, Math, Electronics, and Average. Display the resulting DataFrame and its total row count.
@@ -56,7 +56,7 @@ print(f"Number of rows in VisComm: {len(VisComm)}")
 </details> 
 
 
-A Boolean mask was made, combining two conditions with the & operator: df['Hometown'] == 'Visayas' and df['Track'] == 'Communication'. Passing this condition into .loc[] allowed the student to filter the matching rows and select only the required columns (Name, Gender, Math, Electronics, Average). The student then called len(VisComm) to print the final row count.
+A Boolean mask was made, combining two conditions with the & operator: df['Hometown'] == 'Visayas' and df['Track'] == 'Communication'. Passing this condition into .loc[] allowed to filter the matching rows and select only the required columns (Name, Gender, Math, Electronics, Average). len(VisComm) was then utilized to print the final row count.
 
 ## B. VISAYAS FEMALE DATAFRAME
 
